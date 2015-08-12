@@ -1,17 +1,16 @@
 //
-//  Person.m
+//  DetailViewController.h
 //  SixWeekChallenge
 //
 //  Created by Scott on 8/12/15.
 //  Copyright (c) 2015 Devmountain. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "Person.h"
 
-@implementation Person
+@interface DetailViewController : UIViewController
+@property (strong, nonatomic) Person *person;
 
-@dynamic name;
-
-// make person an entry to a table view cell and nsmutable array
 
 @end

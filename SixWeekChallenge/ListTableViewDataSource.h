@@ -1,5 +1,5 @@
 //
-//  Person.h
+//  ListTableViewDataSource.h
 //  SixWeekChallenge
 //
 //  Created by Scott on 8/12/15.
@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import UIKit;
 
-@interface Person : NSObject
+@interface ListTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (weak,nonatomic) NSString *name;
 
 @end

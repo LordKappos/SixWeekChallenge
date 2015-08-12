@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		D25D09B91B7B9DCD0066F41F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09B81B7B9DCD0066F41F /* main.m */; };
 		D25D09BC1B7B9DCD0066F41F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09BB1B7B9DCD0066F41F /* AppDelegate.m */; };
-		D25D09BF1B7B9DCD0066F41F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09BE1B7B9DCD0066F41F /* ViewController.m */; };
+		D25D09BF1B7B9DCD0066F41F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09BE1B7B9DCD0066F41F /* ListViewController.m */; };
 		D25D09C21B7B9DCD0066F41F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25D09C01B7B9DCD0066F41F /* Main.storyboard */; };
 		D25D09C41B7B9DCD0066F41F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25D09C31B7B9DCD0066F41F /* Images.xcassets */; };
 		D25D09C71B7B9DCD0066F41F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25D09C51B7B9DCD0066F41F /* LaunchScreen.xib */; };
 		D25D09D31B7B9DCD0066F41F /* SixWeekChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09D21B7B9DCD0066F41F /* SixWeekChallengeTests.m */; };
 		D25D09DE1B7B9F020066F41F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09DD1B7B9F020066F41F /* Person.m */; };
+		D25D09E31B7BB4120066F41F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25D09E21B7BB4120066F41F /* CoreData.framework */; };
+		D25D09E61B7BB9FA0066F41F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09E51B7BB9FA0066F41F /* DetailViewController.m */; };
+		D25D09E91B7BBA980066F41F /* PersonModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D25D09E71B7BBA980066F41F /* PersonModel.xcdatamodeld */; };
+		D25D09EC1B7BC3D10066F41F /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09EB1B7BC3D10066F41F /* PersonController.m */; };
+		D25D09EF1B7BC6540066F41F /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09EE1B7BC6540066F41F /* ListTableViewDataSource.m */; };
+		D25D09F21B7BC9060066F41F /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D09F11B7BC9060066F41F /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +39,8 @@
 		D25D09B81B7B9DCD0066F41F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D25D09BA1B7B9DCD0066F41F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D25D09BB1B7B9DCD0066F41F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D25D09BD1B7B9DCD0066F41F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D25D09BE1B7B9DCD0066F41F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D25D09BD1B7B9DCD0066F41F /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		D25D09BE1B7B9DCD0066F41F /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		D25D09C11B7B9DCD0066F41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D25D09C31B7B9DCD0066F41F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D25D09C61B7B9DCD0066F41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +49,16 @@
 		D25D09D21B7B9DCD0066F41F /* SixWeekChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SixWeekChallengeTests.m; sourceTree = "<group>"; };
 		D25D09DC1B7B9F020066F41F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../Person.h; sourceTree = "<group>"; };
 		D25D09DD1B7B9F020066F41F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
+		D25D09E21B7BB4120066F41F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D25D09E41B7BB9FA0066F41F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D25D09E51B7BB9FA0066F41F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D25D09E81B7BBA980066F41F /* PersonModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonModel.xcdatamodel; sourceTree = "<group>"; };
+		D25D09EA1B7BC3D10066F41F /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = "<group>"; };
+		D25D09EB1B7BC3D10066F41F /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = "<group>"; };
+		D25D09ED1B7BC6540066F41F /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
+		D25D09EE1B7BC6540066F41F /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
+		D25D09F01B7BC9060066F41F /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		D25D09F11B7BC9060066F41F /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25D09E31B7BB4120066F41F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,13 +103,23 @@
 			children = (
 				D25D09BA1B7B9DCD0066F41F /* AppDelegate.h */,
 				D25D09BB1B7B9DCD0066F41F /* AppDelegate.m */,
-				D25D09BD1B7B9DCD0066F41F /* ViewController.h */,
-				D25D09BE1B7B9DCD0066F41F /* ViewController.m */,
+				D25D09BD1B7B9DCD0066F41F /* ListViewController.h */,
+				D25D09BE1B7B9DCD0066F41F /* ListViewController.m */,
+				D25D09ED1B7BC6540066F41F /* ListTableViewDataSource.h */,
+				D25D09EE1B7BC6540066F41F /* ListTableViewDataSource.m */,
+				D25D09E41B7BB9FA0066F41F /* DetailViewController.h */,
+				D25D09E51B7BB9FA0066F41F /* DetailViewController.m */,
 				D25D09DC1B7B9F020066F41F /* Person.h */,
 				D25D09DD1B7B9F020066F41F /* Person.m */,
+				D25D09EA1B7BC3D10066F41F /* PersonController.h */,
+				D25D09EB1B7BC3D10066F41F /* PersonController.m */,
 				D25D09C01B7B9DCD0066F41F /* Main.storyboard */,
 				D25D09C31B7B9DCD0066F41F /* Images.xcassets */,
 				D25D09C51B7B9DCD0066F41F /* LaunchScreen.xib */,
+				D25D09F01B7BC9060066F41F /* Stack.h */,
+				D25D09F11B7BC9060066F41F /* Stack.m */,
+				D25D09E71B7BBA980066F41F /* PersonModel.xcdatamodeld */,
+				D25D09E21B7BB4120066F41F /* CoreData.framework */,
 				D25D09B61B7B9DCD0066F41F /* Supporting Files */,
 			);
 			path = SixWeekChallenge;
@@ -224,9 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D25D09BF1B7B9DCD0066F41F /* ViewController.m in Sources */,
+				D25D09F21B7BC9060066F41F /* Stack.m in Sources */,
+				D25D09EC1B7BC3D10066F41F /* PersonController.m in Sources */,
+				D25D09E91B7BBA980066F41F /* PersonModel.xcdatamodeld in Sources */,
+				D25D09E61B7BB9FA0066F41F /* DetailViewController.m in Sources */,
+				D25D09BF1B7B9DCD0066F41F /* ListViewController.m in Sources */,
 				D25D09BC1B7B9DCD0066F41F /* AppDelegate.m in Sources */,
 				D25D09DE1B7B9F020066F41F /* Person.m in Sources */,
+				D25D09EF1B7BC6540066F41F /* ListTableViewDataSource.m in Sources */,
 				D25D09B91B7B9DCD0066F41F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +466,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D25D09E71B7BBA980066F41F /* PersonModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D25D09E81B7BBA980066F41F /* PersonModel.xcdatamodel */,
+			);
+			currentVersion = D25D09E81B7BBA980066F41F /* PersonModel.xcdatamodel */;
+			path = PersonModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D25D09AB1B7B9DCD0066F41F /* Project object */;
 }

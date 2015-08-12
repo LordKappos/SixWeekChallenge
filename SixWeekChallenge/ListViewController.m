@@ -6,13 +6,16 @@
 //  Copyright (c) 2015 Devmountain. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ListViewController.h"
+#import "DetailViewController.h"
+#import "PersonController.h"
 
-@interface ViewController ()
+@interface ListViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation ViewController
+@implementation ListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,9 +38,27 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"viewPerson"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        DetailViewController *viewController = segue.destinationViewController;
+        
+        Person *person = [PersonController sharedInstance].people[indexPath.row];
+        viewController.person = person;
+        
+        
+        
+    }
 }
 
 @end
