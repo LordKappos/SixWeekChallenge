@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-hx-27M">
+                                <rect key="frame" x="249" y="40" width="102" height="30"/>
+                                <state key="normal" title="Add Person">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-a3-jo8">
+                                <rect key="frame" x="457" y="40" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NWZ-Yo-FlW">
+                                <rect key="frame" x="-6" y="78" width="606" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWT-au-z4W">
+                                <rect key="frame" x="78" y="40" width="112" height="30"/>
+                                <state key="normal" title="Randomize">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kEO-hx-27M" firstAttribute="leading" secondItem="pWT-au-z4W" secondAttribute="trailing" constant="59" id="51Z-GP-WSr"/>
+                            <constraint firstItem="pWT-au-z4W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="7HX-Ka-9to"/>
+                            <constraint firstItem="kEO-hx-27M" firstAttribute="baseline" secondItem="pWT-au-z4W" secondAttribute="baseline" id="A8l-Ah-ExD"/>
+                            <constraint firstItem="NWZ-Yo-FlW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-22" id="BST-jo-rCu"/>
+                            <constraint firstItem="pWT-au-z4W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="BlB-RY-wc0"/>
+                            <constraint firstAttribute="trailing" secondItem="NWZ-Yo-FlW" secondAttribute="trailing" id="N11-BL-U7X"/>
+                            <constraint firstItem="kEO-hx-27M" firstAttribute="baseline" secondItem="Fz3-a3-jo8" secondAttribute="baseline" id="ejx-sB-cgd"/>
+                            <constraint firstItem="kEO-hx-27M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gBx-Fz-8YX"/>
+                            <constraint firstItem="NWZ-Yo-FlW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lLt-fi-Sep"/>
+                            <constraint firstItem="NWZ-Yo-FlW" firstAttribute="top" secondItem="pWT-au-z4W" secondAttribute="bottom" constant="8" symbolic="YES" id="r3y-wj-G12"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fz3-a3-jo8" secondAttribute="trailing" constant="48" id="ttD-qA-Afa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addPersonButton" destination="kEO-hx-27M" id="eN2-8r-AU1"/>
+                        <outlet property="randomizeButton" destination="pWT-au-z4W" id="nfH-c7-Wow"/>
+                        <outlet property="tableView" destination="NWZ-Yo-FlW" id="DJ5-ST-c6u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
