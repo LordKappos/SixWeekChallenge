@@ -33,12 +33,12 @@
 - (IBAction)saveButtonTapped:(id)sender {
     if (self.person) {
         self.person.name = self.nameField.text;
-        
         [[PersonController sharedInstance] save];
-} else {
-    self.person = [[PersonController sharedInstance] createPersonWithName:self.nameField.text];
+    } else {
+        [[PersonController sharedInstance]createPersonWithName:self.nameField.text];
+        [[PersonController sharedInstance] save];
+    }
 
-}
 }
 
 - (void)updateWithName:(Person *)person {

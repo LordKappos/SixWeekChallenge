@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import "DetailViewController.h"
 #import "PersonController.h"
+#import "Stack.h"
 
 @interface ListViewController () <UITableViewDataSource, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -48,7 +49,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"viewPerson"]) {
+    if ([segue.identifier isEqualToString:@"cellTapped"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         DetailViewController *viewController = segue.destinationViewController;

@@ -54,7 +54,7 @@
 - (NSURL*)storeURL
 {
     NSURL* documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:NULL];
-    return [documentsDirectory URLByAppendingPathComponent:@"SixWeekChallenge.sqlite"];
+    return [documentsDirectory URLByAppendingPathComponent:@"ClassProject.sqlite"];
 }
 
 - (NSURL*)modelURL

@@ -18,8 +18,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WTS-xE-YCv">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="frame" x="-5" y="0.0" width="600" height="620"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="33N-fO-kWw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aH-tH-xCV">
+                                            <rect key="frame" x="231" y="7" width="138" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="138" id="h0B-rD-1WT"/>
+                                                <constraint firstAttribute="height" constant="30" id="jEH-rv-mcA"/>
+                                            </constraints>
+                                            <state key="normal" title="Randomize">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="0aH-tH-xCV" secondAttribute="centerY" id="51B-ho-Bye"/>
+                                        <constraint firstAttribute="centerX" secondItem="0aH-tH-xCV" secondAttribute="centerX" id="kWv-jd-wJP"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="aVi-5T-Mtk">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -28,29 +49,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="tTi-Gp-kvc" kind="show" id="yNl-Ab-yfz"/>
+                                            <segue destination="tTi-Gp-kvc" kind="show" identifier="cellTapped" id="UB9-MH-Mk4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nmu-2h-SJv"/>
+                                </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aH-tH-xCV">
-                                <rect key="frame" x="231" y="75" width="138" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="138" id="h0B-rD-1WT"/>
-                                </constraints>
-                                <state key="normal" title="Randomize">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WTS-xE-YCv" secondAttribute="trailing" id="CFI-uH-fQh"/>
-                            <constraint firstItem="WTS-xE-YCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D37-Bg-IaX"/>
-                            <constraint firstItem="0aH-tH-xCV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="YRa-z1-iUi"/>
-                            <constraint firstItem="WTS-xE-YCv" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="aow-nd-aSc"/>
+                            <constraint firstAttribute="trailing" secondItem="WTS-xE-YCv" secondAttribute="trailing" constant="5" id="CFI-uH-fQh"/>
+                            <constraint firstItem="WTS-xE-YCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-5" id="D37-Bg-IaX"/>
+                            <constraint firstItem="WTS-xE-YCv" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="64" id="aow-nd-aSc"/>
                             <constraint firstItem="WTS-xE-YCv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pM8-lc-tcm"/>
-                            <constraint firstItem="WTS-xE-YCv" firstAttribute="centerX" secondItem="0aH-tH-xCV" secondAttribute="centerX" id="wkY-fX-hRG"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -144,6 +157,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yNl-Ab-yfz"/>
+        <segue reference="UB9-MH-Mk4"/>
     </inferredMetricsTieBreakers>
 </document>

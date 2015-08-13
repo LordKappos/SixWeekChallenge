@@ -30,6 +30,7 @@ static NSString * const allPeopleKey = @"allPeople";
 
 - (Person *)createPersonWithName:(NSString *)name  {
     Person *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
     person.name = name;
     
     [self saveToPersistentStorage];
