@@ -1,15 +1,15 @@
 //
-//  Person.m
+//  Entity.m
 //  
 //
 //  Created by Scott on 8/13/15.
 //
 //
 
-#import "Person.h"
+#import "Entity.h"
 
 
-@implementation Person
+@implementation Entity
 
 @dynamic name;
 

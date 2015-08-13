@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "PersonController.h"
 
-@interface ListViewController ()
+@interface ListViewController () <UITableViewDataSource, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -56,9 +56,20 @@
         Person *person = [PersonController sharedInstance].people[indexPath.row];
         viewController.person = person;
         
-        
-        
     }
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Person *person = [PersonController sharedInstance].people[indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personCell"];
+    cell.textLabel.text = person.name;
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [PersonController sharedInstance].people.count;
 }
 
 @end

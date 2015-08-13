@@ -9,7 +9,8 @@
 #import "DetailViewController.h"
 #import "PersonController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 
 @end
@@ -18,14 +19,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-[self. updateWithPerson
-
+    
+    [self updateWithName:self.person];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
+- (IBAction)clearButtonTapped:(id)sender {
+    self.nameField.text = @"";
+}
+- (IBAction)saveButtonTapped:(id)sender {
+    if (self.person) {
+        self.person.name = self.nameField.text;
+        
+        [[PersonController sharedInstance] save];
+} else {
+    self.person = [[PersonController sharedInstance] createPersonWithName:self.nameField.text];
+
+}
+}
+
+- (void)updateWithName:(Person *)person {
+    self.nameField.text = person.name;
+    
+}
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+        [textField resignFirstResponder];
+        
+        return YES;
+}
+    
 
 /*
 #pragma mark - Navigation

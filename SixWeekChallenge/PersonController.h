@@ -15,5 +15,11 @@
 
 + (PersonController *)sharedInstance;
 
+- (Person *)createPersonWithName:(NSString *)name;
+
+- (void)removePerson:(Person *)person;
+
+- (void)save;
+
 
 @end

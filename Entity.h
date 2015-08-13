@@ -1,5 +1,5 @@
 //
-//  Person.h
+//  Entity.h
 //  
 //
 //  Created by Scott on 8/13/15.
@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Person : NSManagedObject
+@interface Entity : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
 

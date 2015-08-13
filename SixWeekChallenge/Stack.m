@@ -54,12 +54,12 @@
 - (NSURL*)storeURL
 {
     NSURL* documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:NULL];
-    return [documentsDirectory URLByAppendingPathComponent:@"db.sqlite"];
+    return [documentsDirectory URLByAppendingPathComponent:@"SixWeekChallenge.sqlite"];
 }
 
 - (NSURL*)modelURL
 {
-    return [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    return [[NSBundle mainBundle] URLForResource:@"PersonModel" withExtension:@"momd"];
 }
 
 - (NSManagedObjectModel*)managedObjectModel
