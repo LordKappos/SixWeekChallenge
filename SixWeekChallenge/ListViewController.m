@@ -4,7 +4,6 @@
 //
 //  Created by Scott on 8/12/15.
 //  Copyright (c) 2015 Devmountain. All rights reserved.
-//
 
 #import "ListViewController.h"
 #import "DetailViewController.h"
@@ -71,6 +70,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [PersonController sharedInstance].people.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4;
+}
+//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+//    
+//}
+- (IBAction)randomizeTapped:(id)sender {
+    
+    
 }
 
 @end
